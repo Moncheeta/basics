@@ -60,7 +60,7 @@ class Tic_Tac_Toe():
 		if self.turn == 1:
 			xoro = 1
 		if self.positions[self.row][self.col][0] in (0, 1):
-			return -1;
+			return -1
 		else:
 			self.positions[self.row][self.col][0] = xoro #item 0 = type
 			self.positions[self.row][self.col][1] = posx #item 1 = x position
