@@ -15,6 +15,7 @@ myfont = pygame.font.SysFont('Arial', 150)
 white = [255, 255, 255]
 line_color = [10, 10, 10]
 
+
 class Tic_Tac_Toe():
 	def __init__(self):
 		self.player1 = myfont.render('x', False, (0, 0, 0)) #player x
