@@ -60,7 +60,7 @@ class Tic_Tac_Toe():
 		if self.turn == 1:
 			xoro = 1
 		if self.positions[self.row][self.col][0] in (0, 1):
-			return -1;
+			return -1
 		self.positions[self.row][self.col][0] = xoro #item 0 = type
 		self.positions[self.row][self.col][1] = posx #item 1 = x position
 		self.positions[self.row][self.col][2] = posy #item 2 = y position
@@ -77,18 +77,18 @@ class Tic_Tac_Toe():
 	def check_pos(): #checks where the x or o should go depending on mouse position. This is activated when mouse button is down
 		x, y = pygame.mouse.get_pos()
 		col = None
-		if (x < width / 3):
+		if x < width / 3:
 			col = 0
-		elif (x < width / 3 * 2):
+		elif x < width / 3 * 2:
 			col = 1
-		elif (x < width):
+		elif x < width:
 			col = 2
 		row = None
-		if (y < height / 3):
+		if y < height / 3:
 			row = 0
-		elif (y < height / 3 * 2):
+		elif y < height / 3 * 2:
 			row = 1
-		elif (y < height):
+		elif y < height:
 			row = 2
 		return row, col
 
