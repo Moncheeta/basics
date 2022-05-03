@@ -33,7 +33,7 @@ class Tic_Tac_Toe():
 			self.turn = 0
 		else:
 			self.turn = 1
-			
+
 	def set_positions(self): #resets self.positions
 		self.positions = [[[None for a in range(3)] for b in range(self.rows)] for c in range(self.cols)] #keeps track of what each player placed
 		self.turn = 0 #resets turn to start with player x
