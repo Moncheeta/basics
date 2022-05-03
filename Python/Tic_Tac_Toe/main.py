@@ -76,13 +76,15 @@ class Tic_Tac_Toe():
 			self.positions[row][col][2] = posy #item 2 = y position
 			return 0
 
-	def print_lines(self): #prints the #
+	@staticmethod
+	def print_lines(): #prints the #
 		pygame.draw.line(screen, line_color, (width / 3, 0), (width / 3, height), 7)
 		pygame.draw.line(screen, line_color, (width / 3 * 2, 0), (width / 3 * 2, height), 7)
 		pygame.draw.line(screen, line_color, (0, height / 3), (width, height / 3), 7)
 		pygame.draw.line(screen, line_color, (0, height / 3 * 2), (width, height / 3 * 2), 7)
 
-	def check_pos(self): #checks where the x or o should go depending on mouse position. This is activated when mouse button is down
+	@staticmethod
+	def check_pos(): #checks where the x or o should go depending on mouse position. This is activated when mouse button is down
 		x, y = pygame.mouse.get_pos()
 		if (x < width / 3):
 			col = 0
