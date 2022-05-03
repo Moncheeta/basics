@@ -1,8 +1,5 @@
 import random
 
-#I just fixed the double tabbing and check for
-#proper user input (if it is a number and if it
-#is between 1 and 3)
 
 class TicTacToe:
 	def __init__(self):
