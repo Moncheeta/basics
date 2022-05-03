@@ -15,10 +15,6 @@ myfont = pygame.font.SysFont('Arial', 150)
 white = [255, 255, 255]
 line_color = [10, 10, 10]
 
-""""
-Todo:Check for r pressed to reset
-"""
-
 class Tic_Tac_Toe():
 	def __init__(self):
 		self.player1 = myfont.render('x', False, (0, 0, 0)) #player x
@@ -47,33 +43,28 @@ class Tic_Tac_Toe():
 		else:
 			self.turn = 0
 
-	def select(self, row, col): #adds a x or o in self.positions
+	def select(self): #adds a x or o in self.positions
 		x_offset = -98
 		y_offset = -155
-		if row == 0:
-			posy = height / 3 + y_offset
-		elif row == 1:
+		posy = height / 3 + y_offset
+		if self.row == 1:
 			posy = height / 3 * 2 + y_offset
-		elif row == 2:
+		elif self.row == 2:
 			posy = height + y_offset
-
-		if col == 0:
-			posx = width / 3 + x_offset
-		elif col == 1:
+		posx = width / 3 + x_offset
+		if self.col == 1:
 			posx = width / 3 * 2 + x_offset
-		elif col == 2:
+		elif self.col == 2:
 			posx = width + x_offset
-		if self.turn == 0:
-			xoro = 0
-		elif self.turn == 1:
+		xoro = 0
+		if self.turn == 1:
 			xoro = 1
-
-		if self.positions[row][col][0] in (0, 1):
+		if self.positions[self.row][self.col][0] in (0, 1):
 			return -1;
 		else:
-			self.positions[row][col][0] = xoro #item 0 = type
-			self.positions[row][col][1] = posx #item 1 = x position
-			self.positions[row][col][2] = posy #item 2 = y position
+			self.positions[self.row][self.col][0] = xoro #item 0 = type
+			self.positions[self.row][self.col][1] = posx #item 1 = x position
+			self.positions[self.row][self.col][2] = posy #item 2 = y position
 			return 0
 
 	@staticmethod
@@ -197,7 +188,7 @@ while True:
 		elif event.type == pygame.MOUSEBUTTONDOWN:
 			row, col = game.check_pos()
 			if row is not None and col is not None:
-				yezorno = game.select(row, col)
+				yezorno = game.select()
 				if yezorno == -1:
 					pass
 				else:
