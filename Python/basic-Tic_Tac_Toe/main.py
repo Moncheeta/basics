@@ -15,7 +15,8 @@ class TicTacToe:
 				row.append('-')
 			self.board.append(row)
 
-	def get_random_first_player(self):
+	@staticmethod
+	def get_random_first_player():
 		return random.randint(0, 1)
 
 	def fix_spot(self, row, col, player):
@@ -77,7 +78,8 @@ class TicTacToe:
 					return False
 		return True
 
-	def swap_player_turn(self, player):
+	@staticmethod
+	def swap_player_turn(player):
 		return 'X' if player == 'O' else 'O'
 
 	def show_board(self):
@@ -86,7 +88,8 @@ class TicTacToe:
 				print(item, end=" ")
 			print()
 
-	def get_row_col(self):
+	@staticmethod
+	def get_row_col():
 		while True:
 			try:
 				row, col = list(map(int, input("Enter row and column: ").split()))
