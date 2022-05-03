@@ -23,8 +23,7 @@ class TicTacToe:
 		if self.board[row][col] == '-':
 			self.board[row][col] = player
 			return 0
-		else:
-			return -1
+		return -1
 
 	def is_player_win(self, player):
 		win = None

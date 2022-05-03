@@ -61,11 +61,10 @@ class Tic_Tac_Toe():
 			xoro = 1
 		if self.positions[self.row][self.col][0] in (0, 1):
 			return -1
-		else:
-			self.positions[self.row][self.col][0] = xoro #item 0 = type
-			self.positions[self.row][self.col][1] = posx #item 1 = x position
-			self.positions[self.row][self.col][2] = posy #item 2 = y position
-			return 0
+		self.positions[self.row][self.col][0] = xoro #item 0 = type
+		self.positions[self.row][self.col][1] = posx #item 1 = x position
+		self.positions[self.row][self.col][2] = posy #item 2 = y position
+		return 0
 
 	@staticmethod
 	def print_lines(): #prints the #
