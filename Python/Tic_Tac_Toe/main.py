@@ -165,6 +165,7 @@ class Tic_Tac_Toe():
 			return True
 		return False
 
+
 game = Tic_Tac_Toe()
 
 while True:
