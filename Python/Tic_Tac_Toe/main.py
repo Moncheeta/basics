@@ -10,7 +10,7 @@ pygame.font.init()
 clock = pygame.time.Clock()
 pygame.display.set_caption("Tic Tac Toe")
 screen = pygame.display.set_mode((width, height))
-myfont = pygame.font.SysFont('Arial', 150) 
+myfont = pygame.font.SysFont('Arial', 150)
 
 white = [255, 255, 255]
 line_color = [10, 10, 10]
