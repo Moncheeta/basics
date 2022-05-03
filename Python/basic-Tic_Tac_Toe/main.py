@@ -61,15 +61,7 @@ class TicTacToe:
 			if self.board[i][n - 1 - i] != player:
 				win = False
 				break
-		if win:
-			return win
-		return False
-
-		for row in self.board:
-			for item in row:
-				if item == '-':
-					return False
-		return True
+		return win
 
 	def is_board_filled(self):
 		for row in self.board:
