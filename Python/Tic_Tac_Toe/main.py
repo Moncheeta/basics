@@ -118,7 +118,7 @@ class Tic_Tac_Toe():
 				elif xoro == 1:
 					self.player = self.player2
 					screen.blit(self.player, (posx, posy))
-				elif xoro == None or posx == None or posy == None:
+				elif xoro is None or posx is None or posy is None:
 					pass
 				else:
 					pass
@@ -129,7 +129,7 @@ class Tic_Tac_Toe():
 		col = 0
 		row_num = 0
 		for row in self.positions:
-			if self.positions[row_num][0][0] == None or self.positions[row_num][1][0] == None or self.positions[row_num][2][0] == None:
+			if self.positions[row_num][0][0] is None or self.positions[row_num][1][0] is None or self.positions[row_num][2][0] is None:
 				pass
 			else:
 				if row[0][0] == row[1][0] == row[2][0]: #checks for filled rows
@@ -140,7 +140,7 @@ class Tic_Tac_Toe():
 					return True
 			row_num += 1
 		while col != self.cols:
-			if self.positions[0][col][0] == None or self.positions[1][col][0] == None or self.positions[2][col][0] == None:
+			if self.positions[0][col][0] is None or self.positions[1][col][0] is None or self.positions[2][col][0] is None:
 				pass
 			else:
 				if self.positions[0][col][0] == self.positions[1][col][0] == self.positions[2][col][0]: #checks for any filled coleums
@@ -150,7 +150,7 @@ class Tic_Tac_Toe():
 						self.check_player = self.player2
 					return True
 			col += 1
-		if self.positions[0][0][0] == None or self.positions[1][1][0] == None or self.positions[2][2][0] == None:
+		if self.positions[0][0][0] is None or self.positions[1][1][0] is None or self.positions[2][2][0] is None:
 			pass
 		else:
 			if self.positions[0][0][0] == self.positions[1][1][0] == self.positions[2][2][0]: #checks for a left diagonal
@@ -159,7 +159,7 @@ class Tic_Tac_Toe():
 				elif self.positions[0][0][0] == 1:
 					self.check_player = self.player2
 				return True
-		if self.positions[0][2][0] == None or self.positions[1][1][0] == None or self.positions[2][0][0] == None:
+		if self.positions[0][2][0] is None or self.positions[1][1][0] is None or self.positions[2][0][0] is None:
 			pass
 		else:
 			if self.positions[0][2][0] == self.positions[1][1][0] == self.positions[2][0][0]: #checks for a right diagonal
@@ -171,9 +171,9 @@ class Tic_Tac_Toe():
 		no = False
 		for row in self.positions: #checks for filled game. If it is filled, no = False
 			for thing in row:
-				if thing[0] == None:
+				if thing[0] is None:
 					no = True
-		if no == False:
+		if no is False:
 			return True
 		return False
 
@@ -196,7 +196,7 @@ while True:
 			sys.exit()
 		elif event.type == pygame.MOUSEBUTTONDOWN:
 			row, col = game.check_pos()
-			if row != None and col != None:
+			if row is not None and col is not None:
 				yezorno = game.select(row, col)
 				if yezorno == -1:
 					pass
@@ -204,7 +204,7 @@ while True:
 					game.take_turn()
 	game.print_xando()
 	check_for_win = game.win_check()
-	if check_for_win == True:
+	if check_for_win is True:
 		if game.check_player == game.player1:
 			game.player1_score += 1
 		elif game.check_player == game.player2:
