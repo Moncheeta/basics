@@ -106,8 +106,6 @@ class Tic_Tac_Toe():
 				elif xoro == 1:
 					self.player = self.player2
 					screen.blit(self.player, (posx, posy))
-				elif xoro is None or posx is None or posy is None:
-					pass
 				else:
 					pass
 				current_col += 1
