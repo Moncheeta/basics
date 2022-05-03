@@ -194,13 +194,12 @@ while True:
 			sys.exit()
 		elif event.type == pygame.MOUSEBUTTONDOWN:
 			row, col = game.check_pos()
-			if row != None:
-				if col != None:
-					yezorno = game.select(row, col)
-					if yezorno == -1:
-						pass
-					else:
-						game.take_turn()
+			if row != None and col != None:
+				yezorno = game.select(row, col)
+				if yezorno == -1:
+					pass
+				else:
+					game.take_turn()
 	game.print_xando()
 	check_for_win = game.win_check()
 	if check_for_win == True:
