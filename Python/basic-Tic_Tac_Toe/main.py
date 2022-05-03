@@ -112,5 +112,6 @@ class TicTacToe:
 				print()
 		self.show_board()
 
+
 tic_tac_toe = TicTacToe()
 tic_tac_toe.start()
